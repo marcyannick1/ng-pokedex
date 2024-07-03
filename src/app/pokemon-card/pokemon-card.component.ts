@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-pokemon-card',
   standalone: true,
-  imports: [],
+  imports: [
+    NgOptimizedImage
+  ],
   templateUrl: './pokemon-card.component.html',
   styleUrl: './pokemon-card.component.scss'
 })
 export class PokemonCardComponent {
+  @Input() pokemon!: any;
 
 }

@@ -5,7 +5,10 @@
     border: 1px solid black;
     width: 200px;
     height: 200px;
-    border-radius: 15px
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .card-bottom {

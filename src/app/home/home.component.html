@@ -1,2 +1,7 @@
-
-<app-pokemon-card></app-pokemon-card>
+<div class="pokemon-container">
+  @for (res of pokemonDetails; track res.id) {
+    <app-pokemon-card [pokemon]="res"></app-pokemon-card>
+  } @empty {
+    <p>Aucun pokemon trouvé</p>
+  }
+</div>

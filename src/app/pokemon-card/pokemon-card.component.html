@@ -1,15 +1,16 @@
 <div class="card">
   <div class="img-container">
-    <img width="100%" src="https://www.pngall.com/wp-content/uploads/5/Pikachu-PNG-Photo.png">
+    <img width="150" height="150" ngSrc="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
   </div>
   <div class="card-bottom">
     <div class="text-container">
-      <span>n° 001</span>
-      <span>Pikachu</span>
+      <span>n° {{ pokemon.id }}</span>
+      <span>{{ pokemon.name }}</span>
     </div>
     <div class="text-container">
-      <span>n° 001</span>
-      <span>n° 001</span>
+      @for (type of pokemon.types; track type.id) {
+        <span>{{ type.type.name }}</span>
+      }
     </div>
   </div>
 </div>
