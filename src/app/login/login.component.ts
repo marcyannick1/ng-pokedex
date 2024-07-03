@@ -26,7 +26,7 @@ export class LoginComponent {
     if (this.authService.login(this.username, this.password)) {
       this.router.navigate(['/']);
     } else {
-      this.errorMessage = 'Invalid username or password';
+      this.errorMessage = 'Email ou mot de passe incorrect';
     }
   }
 }

@@ -1,9 +1,15 @@
-.login-container{
+.login-container {
   text-align: center;
   width: 20%;
   margin: auto;
-  .form-group{
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .form-group {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
   }
 }

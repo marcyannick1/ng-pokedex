@@ -5,8 +5,8 @@
       <span>Pokédex</span>
     </div>
   </a>
-  <a href="favoris">Favoris</a>
   @if (isLoggedIn) {
+    <a href="favoris">Favoris</a>
     <button (click)="logout()">Deconnexion</button>
   }
 </nav>

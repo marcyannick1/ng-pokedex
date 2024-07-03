@@ -26,7 +26,7 @@ export class RegisterComponent {
     if (this.authService.register(this.username, this.password)) {
       this.router.navigate(['/login']);
     } else {
-      this.errorMessage = 'Username already exists';
+      this.errorMessage = 'Email deja utilisé';
     }
   }
 }
