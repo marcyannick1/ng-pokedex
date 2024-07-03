@@ -1,6 +1,12 @@
 <nav>
-  <div class="logo">
-    <img height="60" width="60" ngSrc="https://www.svgrepo.com/show/420929/pokeball-pokemon-catch.svg" alt="">
-    <span>Pokédex</span>
-  </div>
+  <a href="/">
+    <div class="logo">
+      <img height="60" width="60" ngSrc="https://www.svgrepo.com/show/420929/pokeball-pokemon-catch.svg" alt="">
+      <span>Pokédex</span>
+    </div>
+  </a>
+  <a href="favoris">Favoris</a>
+  @if (isLoggedIn) {
+    <button (click)="logout()">Deconnexion</button>
+  }
 </nav>

@@ -1,0 +1,9 @@
+.login-container{
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  .form-group{
+    display: flex;
+    flex-direction: column;
+  }
+}

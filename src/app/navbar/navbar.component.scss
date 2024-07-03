@@ -1,10 +1,16 @@
 nav{
   background: rebeccapurple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  a{
+    color: white;
+  }
   .logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
     padding: 10px;
   }
 }

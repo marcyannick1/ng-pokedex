@@ -32,6 +32,10 @@ export class AuthService {
     localStorage.removeItem('currentUser');
   }
 
+  isLoggedIn(): boolean {
+    return localStorage.getItem('currentUser') !== null;
+  }
+
   getCurrentUser(): any {
     // @ts-ignore
     return JSON.parse(localStorage.getItem('currentUser'));

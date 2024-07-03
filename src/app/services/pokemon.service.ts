@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PokemonService {
   private apiUrl = 'https://pokeapi.co/api/v2/pokemon';
+  private favoritesKey = 'pokemonFavorites';
 
   constructor(private http: HttpClient) {}
 
@@ -20,5 +21,27 @@ export class PokemonService {
 
   getPokemonDetailsByUrl(url: string): Observable<any> {
     return this.http.get(url);
+  }
+
+  getFavorites(): any[] {
+    const favorites = localStorage.getItem(this.favoritesKey);
+    return favorites ? JSON.parse(favorites) : [];
+  }
+
+  addFavorite(pokemon: any): void {
+    const favorites = this.getFavorites();
+    favorites.push(pokemon);
+    localStorage.setItem(this.favoritesKey, JSON.stringify(favorites));
+  }
+
+  removeFavorite(pokemon: any): void {
+    let favorites = this.getFavorites();
+    favorites = favorites.filter(fav => fav.id !== pokemon.id);
+    localStorage.setItem(this.favoritesKey, JSON.stringify(favorites));
+  }
+
+  isFavorite(pokemon: any): boolean {
+    const favorites = this.getFavorites();
+    return favorites.some(fav => fav.id === pokemon.id);
   }
 }

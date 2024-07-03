@@ -1,0 +1,33 @@
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 60%;
+  padding: 50px;
+  border: 2px rebeccapurple solid;
+  border-radius: 20px;
+  margin: auto;
+  justify-content: center;
+  background-color: whitesmoke;
+
+  .name-container {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 42px;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    div{
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .img-container {
+    width: 60%;
+  }
+}

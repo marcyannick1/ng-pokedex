@@ -1,6 +1,10 @@
-<div class="pokemon-container">
-  @for (res of pokemonDetails; track res.id) {
-    <app-pokemon-card [pokemon]="res"></app-pokemon-card>
+<div class="search-container">
+  <input type="text" placeholder="Rechercher un Pokémon..." [(ngModel)]="searchTerm" (input)="filterPokemons()">
+</div>
+
+<div class="pokemon-container" *ngIf="pokemonDetails.length">
+  @for (pokemon of filteredPokemonDetails; track pokemon.id) {
+    <app-pokemon-card [pokemon]="pokemon" (toggleFavoriteEvent)="toggleFavorite($event)"></app-pokemon-card>
   } @empty {
     <p>Aucun pokemon trouvé</p>
   }

@@ -1,5 +1,5 @@
 <div class="card">
-  <a [routerLink]="['/', pokemon.id]">
+  <a [routerLink]="['/pokemon', pokemon.id]">
     <div class="img-container">
       <img width="150" height="150" ngSrc="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
     </div>
@@ -15,4 +15,7 @@
       }
     </div>
   </div>
+  <button (click)="toggleFavorite()" class="favoris-btn">
+    {{ isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris' }}
+  </button>
 </div>

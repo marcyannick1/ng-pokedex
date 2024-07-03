@@ -1,1 +1,14 @@
-<p>pokemon-details works!</p>
+<div class="pokemon-container">
+  <div class="img-container">
+    <img width="400" height="400" ngSrc="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
+  </div>
+  <div class="name-container">
+    <span class="name">{{ pokemon.name }}</span>
+    <span>n° {{ pokemon.id }}</span>
+    <div>
+      @for (type of pokemon.types; track type.id) {
+        <span class="first-letter">{{ type.type.name }}</span>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>Favoris</h1>
+<div class="pokemon-container" *ngIf="favorites.length">
+  @for (pokemon of favorites; track pokemon.id) {
+    <app-pokemon-card [pokemon]="pokemon" (toggleFavoriteEvent)="toggleFavorite($event)"></app-pokemon-card>
+  } @empty {
+    <p>Aucun pokemon trouvé</p>
+  }
+</div>
