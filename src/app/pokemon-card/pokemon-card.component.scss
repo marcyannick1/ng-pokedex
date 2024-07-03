@@ -1,6 +1,8 @@
 .card {
   width: 200px;
-
+  span.first-letter::first-letter{
+    text-transform: uppercase;
+  }
   .img-container {
     border: 1px solid black;
     width: 200px;
@@ -9,6 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover{
+      img{
+        animation: scaleUp .5s forwards;
+      }
+    }
   }
 
   .card-bottom {
@@ -21,4 +28,14 @@
     }
   }
 
+}
+
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }

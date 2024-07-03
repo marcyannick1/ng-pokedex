@@ -1,15 +1,17 @@
 <div class="card">
-  <div class="img-container">
-    <img width="150" height="150" ngSrc="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
-  </div>
+  <a [routerLink]="['/', pokemon.id]">
+    <div class="img-container">
+      <img width="150" height="150" ngSrc="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
+    </div>
+  </a>
   <div class="card-bottom">
     <div class="text-container">
       <span>n° {{ pokemon.id }}</span>
-      <span>{{ pokemon.name }}</span>
+      <span class="first-letter">{{ pokemon.name }}</span>
     </div>
     <div class="text-container">
       @for (type of pokemon.types; track type.id) {
-        <span>{{ type.type.name }}</span>
+        <span class="first-letter">{{ type.type.name }}</span>
       }
     </div>
   </div>
